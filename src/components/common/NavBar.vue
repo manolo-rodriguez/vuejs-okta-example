@@ -3,7 +3,7 @@
     <router-link to="/" tag="button" id='home-button'> Home </router-link>
     <button v-if='authenticated' v-on:click='logout' id='logout-button'> Logout </button>
     <button v-else v-on:click='$auth.loginRedirect' id='login-button'> Login </button>
-  </div>  
+  </div>
 </template>
 
 <script>

@@ -13,7 +13,7 @@
 import NavBar from '@/components/common/NavBar'
 export default {
   name: 'App',
-  components: [ NavBar ],
+  components: { NavBar },
   data () {
     return {
       authenticated: false

@@ -12,7 +12,7 @@ Vue.use(Auth, {
 })
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -33,3 +33,7 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach(Vue.prototype.$auth.authRedirectGuard())
+
+export default router

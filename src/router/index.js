@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Auth from '@okta/okta-vue'
 import Home from '@/components/Home'
+import Protected from '@/components/Protected'
 
 Vue.use(Auth, {
   issuer: `${process.env.OKTA_URL}`,
@@ -22,6 +23,13 @@ export default new Router({
     {
       path: '/implicit/callback',
       component: Auth.handleCallback()
+    },
+    {
+      path: '/protected',
+      component: Protected,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })

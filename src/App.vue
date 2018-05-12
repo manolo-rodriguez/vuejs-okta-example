@@ -3,7 +3,8 @@
     <img src="./assets/logo.png">
     <nav-bar
       :authenticated="authenticated"
-      :handleLogout="logout "
+      :handleLogout="logout"
+      :handleLogin="login"
     />
     <router-view/>
   </div>
@@ -23,11 +24,14 @@ export default {
     this.isAuthenticated()
   },
   watch: {
-    $route: 'isAuthenticated'
+    '$route': 'isAuthenticated'
   },
   methods: {
     async isAuthenticated () {
-      this.isAuthenticated = await this.$auth.isAuthenticated()
+      this.authenticated = await this.$auth.isAuthenticated()
+    },
+    login () {
+      this.$auth.loginRedirect('/')
     },
     async logout () {
       await this.$auth.logout()

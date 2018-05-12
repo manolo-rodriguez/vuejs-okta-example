@@ -5,6 +5,7 @@
     </h1>
   </div>  
 </template>
+
 <script>
 export default {
   name: 'Protected',
@@ -14,5 +15,4 @@ export default {
     }
   }
 }
-</script>
 </script>

@@ -1,20 +1,20 @@
 const state = {
-  actionsInProgress: 0
+  processesInProgress: 0
 }
 
 const getters = {
-  showProgress: state => state.actionsInProgress > 0
+  showProgress: state => state.processesInProgress > 0
 }
 
 const actions = {
-  startAction ({ commit, state }) {
-    commit('incrementActionsInProgress', 1)
+  startNewProcess ({ commit, state }) {
+    commit('incrementProcesses', 1)
   }
 }
 
 const mutations = {
-  incrementActionsInProgress (state, numberOfActions) {
-    state.actionsInProgress = state.actionsInProgress + numberOfActions
+  incrementProcesses (state, numberOfProcesses) {
+    state.actionsInProgress = state.actionsInProgress + numberOfProcesses
   }
 }
 

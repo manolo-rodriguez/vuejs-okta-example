@@ -17,10 +17,12 @@ const actions = {
 
 const mutations = {
   incrementProcesses (state, numberOfProcesses) {
-    state.actionsInProgress = state.actionsInProgress + numberOfProcesses
+    state.processesInProgress = state.processesInProgress + numberOfProcesses
   },
   decrementProcesses (state, numberOfProcesses) {
-    state.actionsInProgress = state.actionsInProgress - numberOfProcesses
+    if (state.processesInProgress > 0) {
+      state.processesInProgress = state.processesInProgress - numberOfProcesses
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="progress-overlay">
     Loading...
-  </div>  
+  </div>
 </template>
 
 <script>

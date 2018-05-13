@@ -6,14 +6,17 @@
       :handleLogin="login"
     />
     <router-view/>
+    <progress-overlay/>
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/common/NavBar'
+import ProgressOverlay from '@/components/common/ProgressOverlay'
+
 export default {
   name: 'App',
-  components: { NavBar },
+  components: { NavBar, ProgressOverlay },
   data () {
     return {
       authenticated: false

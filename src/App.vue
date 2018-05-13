@@ -13,10 +13,14 @@
 <script>
 import NavBar from '@/components/common/NavBar'
 import ProgressOverlay from '@/components/common/ProgressOverlay'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'App',
   components: { NavBar, ProgressOverlay },
+  computed: mapGetters({
+    showProgress: 'showProgress'
+  }),
   data () {
     return {
       authenticated: false

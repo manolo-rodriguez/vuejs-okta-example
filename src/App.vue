@@ -40,16 +40,16 @@ export default {
       'finishProcess'
     ]),
     async isAuthenticated () {
-      this.startNewProcess()
       this.authenticated = await this.$auth.isAuthenticated()
-      this.finishProcess()
     },
     login () {
       this.$auth.loginRedirect('/')
     },
     async logout () {
+      this.startNewProcess()
       await this.$auth.logout()
       await this.isAuthenticated()
+      this.finishProcess()
 
       this.$router.push({
         path: '/'

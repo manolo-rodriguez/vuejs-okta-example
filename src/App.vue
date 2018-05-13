@@ -6,7 +6,9 @@
       :handleLogin="login"
     />
     <router-view/>
-    <progress-overlay/>
+    <progress-overlay
+      v-if="showProgress"
+    />
   </div>
 </template>
 

@@ -15,7 +15,7 @@
 <script>
 import NavBar from '@/components/common/NavBar'
 import ProgressOverlay from '@/components/common/ProgressOverlay'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'App',
@@ -35,6 +35,9 @@ export default {
     '$route': 'isAuthenticated'
   },
   methods: {
+    ...mapActions([
+      'startNewProcess'
+    ]),
     async isAuthenticated () {
       this.authenticated = await this.$auth.isAuthenticated()
     },

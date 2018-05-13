@@ -1,6 +1,8 @@
 # vue-okta-example
 
-> Vue.js and Okta integration for Auth
+Vue.js and Okta integration for Auth
+
+This **Vue.js** project uses **Okta** and **vuex**
 
 ## Build Setup
 

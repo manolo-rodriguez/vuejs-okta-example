@@ -36,7 +36,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'startNewProcess'
+      'startNewProcess',
+      'finishProcess'
     ]),
     async isAuthenticated () {
       this.authenticated = await this.$auth.isAuthenticated()
